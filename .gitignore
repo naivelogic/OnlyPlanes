@@ -1,0 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+#dota_devkit related
+develop-eggs/
+dist/
+*.egg-info/
+*.so
+*.cxx
+__pycache__
+
+.vscode/
+
+# Jupyter Notebook
+*.ipynb_checkpoints/
+
