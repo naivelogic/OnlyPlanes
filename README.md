@@ -8,6 +8,10 @@ Project Links:  [[Paper][paper_link]] [[Project Page][project_page]] [[Video][yo
 [medium_blog_series]: TBD
 [youtube_vid]: TBD
 
+### Example Inference Results from OnlyPlanes Models tested on Real-World Datasets
+
+![](docs/media/OnlyPlanes_example_inferences_real_datasets.png)
+
 ## Dataset Overview
 OnlyPlanes is a small dataset (less than 50k images and less than 20GB in weight) for airplane object and instant segmentation computer vision task from satellite imagery.
 
@@ -64,9 +68,7 @@ To evaluate the performance of OnlyPlanes we tested the performance on detecting
 | iSAID             | 46.48 | 68.99 | 53.89 | Faster R-CNN     |
 | iSAID             | 20.56 | 57.74 | 30.25 | Mask R-CNN       |
 
-### Example Inference Results from OnlyPlanes Models tested on Real-World Datasets
 
-![](docs/media/OnlyPlanes_example_inferences_real_datasets.png)
 
 ----
 ## Citation
