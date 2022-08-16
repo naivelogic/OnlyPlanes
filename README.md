@@ -134,6 +134,42 @@ Benchmark Datasets
 
 </details>
 
+
+----
+
+# Getting Started
+
+This step we install all the necessary dependencies to train an object detector on a local machine. For this workshop we will be utilizing `detectron2` that runs on `PyTorch` as the framework for training DNNs. 
+__Quick start__
+* Step 1: clone workshop repo ([git required](https://git-scm.com/)):  `git clone https://github.com/naivelogic/OnlyPlanes.git`
+* Step 2: navigate to repo folder:   `cd OnlyPlanes`
+* Step 3: install dependencies with [Anaconda](https://www.continuum.io/downloads): `sh install_env.sh`
+* Step 4: verify installation: `conda activate OP`
+
+<details>
+ <summary>Usage: Local vs AML</summary>
+For this repository to simplify the usage, we will provide the code from a local computational perspective. In the paper, we utilized Azure Machine Learning for training and evaluating the performance of the models. Additionally, in the paper all data was stored on an Azure blob container. While Azure ML is great for scaling compute intensive workloads, as long as you meet the requirements below a single GPU can put utilized to reperform results.
+</details>
+
+
+### Requirements
+* [Python](https://www.python.org/downloads/) > 3.5
+* [Pytorch](http://pytorch.org/) > 1.9
+* [torchvision](https://github.com/pytorch/vision/) that matches the PyTorch installation. You can install them together at [pytorch.org](https://pytorch.org/) to make sure of this.
+* [Cuda](https://developer.nvidia.com/cuda-toolkit) > 11.0
+* [Detectron2](https://github.com/facebookresearch/detectron2)
+* _Make sure the CUDA, Pytorch and Detectron2 have the correct CUDA version if using GPU_
+
+<details>
+ <summary>special notes on getting started with requirements</summary>
+My OS for this project was a ubuntu-18.04 Azure VM with a K8 GPU. I highly recommend using at least one GPU (w/ >20GB of memory) with the correct CUDA installed. Make sure the CUDA, Pytorch and Detectron2 have the correct CUDA version if using GPU. 
+</details>
+
+
+## Usage
+------
+This project contains various scripts to reproduce the results in the paper. 
+
 ----
 ## Citation
 
