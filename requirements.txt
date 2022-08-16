@@ -1,0 +1,38 @@
+# pip install -r requirements.txt
+
+# base ----------------------------------------
+Cython
+ninja
+yacs
+matplotlib
+tqdm
+opencv-python
+pandas
+numpy
+Pillow
+imgaug
+albumentations
+pillow
+pandas
+scipy
+ipywidgets
+pylint #vscode
+autopep8 #vscode
+argparse
+timm
+six
+tensorboardX
+tensorboard
+fiftyone
+
+#
+mlflow
+azureml-core
+azureml-mlflow
+azureml-dataprep
+azure-storage-blob
+
+#
+python-dotenv
+scikit-multilearn
+seaborn
