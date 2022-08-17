@@ -5,8 +5,8 @@
 
 SYNTH_DATASET_URL="https://msdsdiag.blob.core.windows.net/naivelogicblob/OnlyPlanes/OnlyPlanes_dataset_08122022.zip"
 
-mkdir -p dataset
-cd dataset
+mkdir -p datasets
+cd datasets
 
 echo "=================================================="
 echo "Downloading Microsoft Synthetic OnlyPlanes Dataset"

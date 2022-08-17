@@ -15,3 +15,6 @@ __pycache__
 # Jupyter Notebook
 *.ipynb_checkpoints/
 
+models/
+ph/
+datasets/
