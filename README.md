@@ -3,10 +3,10 @@ Project Links:  [[Paper][paper_link]] [[Project Page][project_page]] [[Video][yo
 
 ***Abstract:*** _This paper addresses the challenge of solely using synthetic data to train and improve computer vision models for detecting airplanes in satellite imagery by iteratively tuning the training dataset. The domain gap for computer vision algorithms remains a continued struggle to generalize when learning only from synthetic images and produce results comparable to models learning from real images. We present OnlyPlanes, a synthetic satellite image training dataset of airplanes in a top-view that contains 12,500 images, 132,967 aircraft instances, with 80 fine grain attributes. We detail the synthetic rendering process to procedurally-generate and render training images and introduce the synthetic learning feedback loop that iteratively finetunes the training dataset to improve model performance. Experiments show the prior performance degradations and false positives when testing the model on real-world images were corrected when incrementally incorporating new features to the training dataset such as diverse plane formations and altitude variations. We demonstrate the promising future for continually improving models by tuning the synthetic training data developed in an iterative fashion to effectively close the synthetic to real domain gap. The OnlyPlanes dataset, source code and trained models are available at https://github.com/naivelogic/OnlyPlanes._
 
-[paper_link]: docs/OnlyPlanes_report_placeholder.pdf
-[project_page]: https://naivelogic.github.io/OnlyPlanes/
+[paper_link]: docs/OnlyPlanes.pdf
+[project_page]: https://naivelogic.github.io/OnlyPlanes/blog/
 [medium_blog_series]: TBD
-[youtube_vid]: TBD
+[youtube_vid]: https://youtu.be/zTJcE1suK9s
 
 ### Example Inference Results from OnlyPlanes Models tested on Real-World Datasets
 
@@ -28,7 +28,6 @@ OnlyPlanes is a small dataset (less than 50k images and less than 20GB in weight
 [lb02]: https://msdsdiag.blob.core.windows.net/naivelogicblob/OnlyPlanes/civil_role_annotations.json
 [ds2]: https://msdsdiag.blob.core.windows.net/naivelogicblob/OnlyPlanes/bing2d_empty/Bing2D_empty_airports.zip
 [lb03]: https://msdsdiag.blob.core.windows.net/naivelogicblob/OnlyPlanes/bing2d_empty/coco_annotations_emptyBing2Dairport_1024split_small.json
-
 
 
 <details>
