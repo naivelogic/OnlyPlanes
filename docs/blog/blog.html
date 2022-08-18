@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<!--<sup>blog inspired by https://github.com/microsoft/FaceSynthetics! Thanks Yall. Great Job - Phillip</sup>-->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>OnlyPlanes</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <script src="https://kit.fontawesome.com/49f46e7382.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+        <div class="container is-max-desktop">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://www.microsoft.com/en-us/research/lab/microsoft-research-redmond/">
+                    <img src="img/Microsoft-logo.svg" alt="Mixed Reality & AI Lab – Redmond" style="height: 1.4rem;">
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="https://www.microsoft.com/en-us/research/lab/microsoft-research-redmond/">
+                        Mixed Reality & AI
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section class="section">
+        <div class="container is-max-desktop">
+            <h1 class="title is-2 has-text-centered">
+                Only<br class="is-hidden-tablet">Planes
+            </h1>
+            <p class="subtitle is-4 has-text-centered">
+                Incrementally Tuning <br class="is-hidden-tablet"> Synthetic Training Datasets for Satellite Object Detection
+            </p>
+            <p class="subtitle is-5 has-text-centered has-text-grey">
+                A Microsoft<br class="is-hidden-tablet"> Synthetic Dataset
+            </p>
+            <p class="subtitle is-6 has-text-centered authors" style="line-height: 1.5;">
+                <span>
+                    <a href="https://github.com/naivelogic" class="has-tooltip-bottom" data-tooltip="* denotes equal contribution">Phillip&nbsp;Hale</a>
+                    <!--<sup>*</sup>-->
+                </span>
+                <span>
+                    <a href="https://www.luketiday.com/" class="has-tooltip-bottom" data-tooltip="* denotes equal contribution">Luke&nbsp;Tiday</a>
+                </span>
+                <span>
+                    <a href="https://www.afakewebside.com/">Pedro&nbsp;Urbina</a>
+                </span>
+            </p>
+        </div>
+        <div class="container is-max-desktop has-text-centered mt-5">
+            <!-- <a class="button is-rounded is-link is-light mr-2" disabled>
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper</span>
+            </a> -->
+            <a href="https://msdsdiag.blob.core.windows.net/naivelogicblob/OnlyPlanes/OnlyPlanes%20Incrementally%20Tuning%20Synthetic%20Training%20Datasets%20for%20Satellite%20Object%20Detection.pdf" class="button is-rounded is-link is-light mr-2">
+                <span class="icon"><i class="ai ai-arxiv"></i></span>
+                <span>arXiv - TBD</span>
+            </a>
+            <a href="https://youtu.be/zTJcE1suK9s" class="button is-rounded is-link is-light mr-2">
+                <span class="icon"><i class="fab fa-youtube"></i></span>
+                <span>Video</span>
+            </a>
+            <a href="https://github.com/naivelogic/OnlyPlanes" class="button is-rounded is-link is-light">
+                <span class="icon"><i class="fab fa-github"></i></span>
+                <span>Dataset</span>
+            </a>
+        </div>
+    </section>
+    <section>
+        <div class="container is-max-desktop">
+            <figure class="image is-16by9">
+                <iframe class="has-ratio" width="640" height="360" src="https://youtu.be/zTJcE1suK9s" frameborder="0" allowfullscreen></iframe> 
+                <iframe class="has-ratio" width="640" height="360" src="https://msdsdiag.blob.core.windows.net/naivelogicblob/OnlyPlanes/archive/OnlyPlanes_boston_gif_FINAL.mp4" frameborder="0" allowfullscreen></iframe>
+            </figure>
+        </div>
+    </section>
+    <section class="section">
+        <div class="container is-max-desktop">
+            <h1 class="title is-4">
+                Abstract
+            </h1>
+            <div class="content has-text-justified-desktop">
+                <p> This paper addresses the challenge of solely using synthetic data to train and improve computer vision models for detecting airplanes in satellite imagery by iteratively tuning the training dataset. The domain gap for computer vision algorithms remains a continued struggle to generalize when learning only from synthetic images and produce results comparable to models learning from real images. 
+                </p>
+                <p>
+                    We present <strong>OnlyPlanes</strong>, a synthetic satellite image training dataset of airplanes in a top-view that contains 12,500 images, 132,967 aircraft instances, with 80 fine grain attributes. We detail the synthetic rendering process to procedurally-generate and render training images and introduce the synthetic learning feedback loop that iteratively finetunes the training dataset to improve model performance. Experiments show the prior performance degradations and false positives when testing the model on real-world images were corrected when incrementally incorporating new features to the training dataset such as diverse plane formations and altitude variations. 
+                </p>
+                <p>
+                    We demonstrate the promising future for continually improving models by tuning the synthetic training data developed in an iterative fashion to effectively close the synthetic to real domain gap. The OnlyPlanes dataset, source code and trained models are available at
+                    <a href="https://github.com/naivelogic/OnlyPlanes">https://github.com/naivelogic/OnlyPlanes</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section pt-0">
+        <div class="container is-max-desktop">
+            <h1 class="title is-4">
+                Dataset
+            </h1>
+            <div class="content has-text-justified-desktop">
+                <img class="mb-5" src="media/OnlyPlanes_sample_imgs_annotations.png">
+                <p>
+                    Our dataset of <strong>12,500 synthetic images</strong> 132,967 aircraft instances, with 80 fine grain attributes that contains horizontal bounding box and instance segmentation annotations is available for non-commercial research purposes. Please visit
+                    <a href="https://github.com/microsoft/OnlyPlanes">the project GitHub repository</a> (currently private).
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section pt-0">
+        <div class="container is-max-desktop">
+            <div class="columns">
+                <div class="column">
+                    <h1 class="title is-5">
+                        Synthetic Rending Framework
+                    </h1>
+                    <video class="mb-3 is-16by9" width="100%" autoplay muted loop playsinline poster="img/generating_at_scale.png">
+                        <source src="video/dense_landmarks.mp4" type="video/mp4">
+                    </video>
+                    <p>
+                        Synthetic rendering process for OnlyPlanes. 3D models procedurally placed on real airport background images (cleaned of planes). Pre-defined rendering configurations and parameters are used to generate large numbers of diverse images that are annotated in a COCO format and ready for training computer vision models.
+                    </p>
+                    <div class="content has-text-justified-desktop"><img src="media/sx_rendering_process.png" sytle="height: 10%;" class="mb-5"></div>
+                </div>
+                <div class="column">
+                    <h1 class="title is-5">
+                        Synthetics Learning Feedback Loop
+                    </h1>
+                    <div class="content has-text-justified-desktop"><img src="img/synthetics_learning_feedback_loop.png" class="mb-5"></div>
+                    <p>
+                        The OnlyPlanes dataset was constructed incrementally through the synthetic learning feedback loop. This is a process that involves stacking multiple incremental synthetic datasets to train and evaluate a model and address areas of improvements by tuning elements of the dataset. Each increment incorporates new targeted features that reduce the synthetic to real domain gap and improve model performance by subsequently addressing previously identified false detections scenarios in real world images.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section pt-0">
+        <div class="container is-max-desktop">
+            <h1 class="title is-4">Method</h1>
+            <div class="columns is-mobile is-variable is-0-mobile is-0-tablet is-1-desktop is-1-widescreen is-1-fullhd">
+                <div class="column">Planes in Rows<img src="img/op_focus_area_3_planeformation.png" style="width: 100%;height: 100%;"></div>
+                <div class="column">Planes@Gates<img src="img/op_focus_area_4_gates.png" style="width: 100%;height: 100%;"></div>
+                <div class="column">Scale Variation<img src="img/op_focus_area_6_far.png" style="width: 100%;height: 100%;"></div>
+                <div class="column">Sheer Effect<img src="img/op_focus_area_1_sheer.png" style="width: 100%;height: 100%;"></div>                
+            </div>
+            <p class="has-text-justified-desktop">
+                Synthetic scenes and objects for training models requires the dataset to incorporate features comparable to those that would be encountered in real-world scenarios with a large number of diverse images and instances. The synthetic learning feedback loop was used to create a synthetic dataset by incorporating different simulated components of variability to improve prior results. The variability introduced in OnlyPlanes was broken down into four tasks: 1) a plane formation behavior called “planes in a row” where planes would be rendered in a linear position. 2) a plane clustering method called “planes at gates” where planes are parked near airport gates, 3) altitude variation simulating aircrafts viewed far away and 4) sheering effect that renders planes similar to an affine transformation. 
+            </p>
+            <div class="columns mt-4">
+                <div class="column">
+                    <img class="mb-3" src="media/OnlyPlanes_formation_randomcluster.png" />
+                    <p>
+                        OnlyPlanes plane cluster rendering and airport landmark locations, including: (a) full resolution of 2D airport backplate, (b) annotated airport-landmark locations for airplane collision and occlusion boundary, and (c) examples of rendered airplanes in a random cluster.
+                    </p>
+                </div>
+                <div class="column">
+                    <img class="mb-3" src="media/OnlyPlanes_formation_plane_rows.png" />
+                    <p>
+                        OnlyPlanes formation rendering for planes in a row. (a) the airport landmark areas, (b) planes in a row rendering geometry, and (c) example of rendered planes in a row.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section pt-0">
+        <div class="container is-max-desktop">
+            <h1 class="title is-4">
+                Benchmarking OnlyPlane Model Perfromance
+            </h1>
+            <div class="content has-text-justified-desktop">
+                <img class="mb-3" src="media/OnlyPlanes_example_inferences_real_datasets.png" />
+                <p>
+                    Inference results on various real-world aerial plane detection datasets. Results for (a) object detection and (b) instance segmentation from the OnlyPlanes trained model tested on (c) RarePlanes real test dataset, (d) DIOR dataset and (e) iSAID dataset. Results demonstrate object detection and instance segmentation results accurately in various real-world datasets.
+                </p>
+            </div>
+            <div class="columns mt-4">
+                <div class="column">
+                    <img class="mb-3" src="img/incrementally_improvement_plot.png" />
+                </div>
+                <div class="column">
+                    <div class="content has-text-justified-desktop">
+                        <p>
+                            OnlyPlanes Synthetic Learning Feedback Loop Experiment Summary on RarePlanes Test images using the mAP50 scores. 
+                            Over the course of eight weeks by continually tuning the synthetic training dataset, incremental improvements were realized. While this synthetic learning feedback loop requires a manual process to review new features to simulate, this is a trade off at the expense of manually collecting and labelling rare scenarios in real-world cases which would presents other limiting constrains in a similar eight week period. By focusing on tuning the datasets and incorporating incremental improvements based on prior performance gaps, the overall detection accuracy improves.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section pt-0">
+        <div class="container is-max-desktop">
+            <h1 class="title is-4">
+                BibTeX
+            </h1>
+            <pre>
+@article{hale2022OnlyPlanes,
+    title={OnlyPlanes: Incrementally Tuning Synthetic Training Datasets for Satellite Object Detection},
+    author={Hale, Phillip and Tiday, Luke and Urbina, Pedro},
+    number={arXiv:TBD},
+    year={2022}
+}</pre>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>
+                <img src="img/Microsoft-logo-only.svg" class="mt-5" alt="Mixed Reality & AI" style="height: 2rem;">
+            </p>
+        </div>
+    </footer>
+</body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Get all "navbar-burger" elements
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+        // Check if there are any navbar burgers
+        if ($navbarBurgers.length > 0) {
+
+            // Add a click event on each of them
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+
+                    // Get the target from the "data-target" attribute
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+
+                    // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+
+                });
+            });
+        }
+    });
+</script>
+
+</html>
